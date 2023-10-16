@@ -124,7 +124,7 @@ button:focus {
             #a3d0c3);
 }
 
-/* .btn-up {
+.btn-up {
     position: fixed;
     background-color: #dfe2c4;
     right: 20px;
@@ -156,7 +156,7 @@ button:focus {
     .btn-up:hover {
         background-color: #a3d0c3;
     }
-} */
+}
 
 /* * {
     box-sizing: border-box;

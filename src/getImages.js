@@ -22,7 +22,7 @@ const getImages = async (query, page) => {
     }
     createMarkup(data);
     lightbox.refresh();
-    // onScroll();
+    onScroll();
 
     if (page === 1) {
       Notify.success(`Hooray! We found ${data.totalHits} images.`);
@@ -42,15 +42,15 @@ const getImages = async (query, page) => {
 };
 // console.log(getImages());
 
-// function onScroll() {
-//   const { height: cardHeight } = document
-//     .querySelector('.gallery')
-//     .firstElementChild.getBoundingClientRect();
+function onScroll() {
+  const { height: cardHeight } = document
+    .querySelector('.gallery')
+    .firstElementChild.getBoundingClientRect();
 
-//   window.scrollBy({
-//     top: cardHeight * 2,
-//     behavior: 'smooth',
-//   });
-// }
+  window.scrollBy({
+    top: cardHeight * 2,
+    behavior: 'smooth',
+  });
+}
 
 export { getImages };
