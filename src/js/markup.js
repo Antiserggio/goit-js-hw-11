@@ -1,4 +1,4 @@
-import { gallery } from './index_2';
+import { gallery } from '..';
 
 function createMarkup(data) {
   const markup = data.hits
@@ -43,6 +43,5 @@ function createMarkup(data) {
 
   gallery.insertAdjacentHTML('beforeend', markup);
 }
-// console.log(createMarkup());
 
 export { createMarkup };

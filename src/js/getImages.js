@@ -1,8 +1,9 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import { fetchImages, perPage } from './fetchImages';
-import { loadMoreBtn, lightbox } from './index_2';
+import { loadMoreBtn, lightbox } from '..';
 import { createMarkup } from './markup';
+import { onScroll } from './scroll';
 
 const getImages = async (query, page) => {
   try {
@@ -40,17 +41,5 @@ const getImages = async (query, page) => {
     Notify.failure('Oops! Something went wrong!');
   }
 };
-// console.log(getImages());
-
-function onScroll() {
-  const { height: cardHeight } = document
-    .querySelector('.gallery')
-    .firstElementChild.getBoundingClientRect();
-
-  window.scrollBy({
-    top: cardHeight * 2,
-    behavior: 'smooth',
-  });
-}
 
 export { getImages };

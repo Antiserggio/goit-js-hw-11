@@ -21,6 +21,4 @@ const fetchImages = async (query, page) => {
   return data;
 };
 
-// console.log(fetchImages());
-
 export { fetchImages, perPage };
